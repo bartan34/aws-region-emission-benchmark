@@ -1,0 +1,16 @@
+region,session,utc,em_zone,gco2e_kwh,resolution,quality,source
+us-east-1,A,2026-10-11T14:10Z,US-MIDA-PJM,416,5min,preliminary,Electricity Maps app
+us-west-2,A,2026-10-11T14:10Z,US-NW-PACW,374,5min,preliminary,Electricity Maps app
+eu-west-1,A,2026-10-11T14:10Z,IE,144,5min,synthetic,Electricity Maps app
+eu-north-1,A,2026-10-11T14:10Z,SE-SE3,23,5min,preliminary,Electricity Maps app
+ap-south-1,A,2026-10-11T14:10Z,IN-WE,674,5min,preliminary,Electricity Maps app
+us-east-1,B,2026-10-11T21:00Z,US-MIDA-PJM,444,hourly,preliminary,Electricity Maps app
+us-west-2,B,2026-10-11T21:00Z,US-NW-PACW,333,hourly,preliminary,Electricity Maps app
+eu-west-1,B,2026-10-11T21:00Z,IE,247,hourly,synthetic,Electricity Maps app
+eu-north-1,B,2026-10-11T21:00Z,SE-SE3,22,hourly,preliminary,Electricity Maps app
+ap-south-1,B,2026-10-11T21:00Z,IN-WE,699,hourly,preliminary,Electricity Maps app
+us-east-1,B,2026-10-11T22:00Z,US-MIDA-PJM,447,hourly,preliminary,Electricity Maps app
+us-west-2,B,2026-10-11T22:00Z,US-NW-PACW,321,hourly,preliminary,Electricity Maps app
+eu-west-1,B,2026-10-11T22:00Z,IE,254,hourly,synthetic,Electricity Maps app
+eu-north-1,B,2026-10-11T22:00Z,SE-SE3,22,hourly,preliminary,Electricity Maps app
+ap-south-1,B,2026-10-11T22:00Z,IN-WE,701,hourly,preliminary,Electricity Maps app

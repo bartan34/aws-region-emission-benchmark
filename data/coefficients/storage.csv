@@ -1,0 +1,4 @@
+parameter,value,unit,source,source_url,accessed
+hdd_wh_per_tb_hour,0.65,Wh/TB-h,Cloud Carbon Footprint methodology,https://www.cloudcarbonfootprint.org/docs/methodology/,2026-10-03
+ssd_wh_per_tb_hour,1.2,Wh/TB-h,Cloud Carbon Footprint methodology,https://www.cloudcarbonfootprint.org/docs/methodology/,2026-10-03
+s3_replication_factor,3,x,Cloud Carbon Footprint methodology,https://www.cloudcarbonfootprint.org/docs/methodology/,2026-10-03

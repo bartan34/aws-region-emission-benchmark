@@ -1,0 +1,28 @@
+# Local-only planning and notes (never committed)
+*.local.md
+notes/
+
+# Secrets and environment
+.env
+*.pem
+*.key
+.aws/
+
+# Generated user-data with substituted values
+/tmp/
+scripts/ud-*.sh
+
+# Screenshots (go to the coursework appendix, not the repo)
+*.png
+*.jpg
+*.jpeg
+!docs/architecture.png
+appendix/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store

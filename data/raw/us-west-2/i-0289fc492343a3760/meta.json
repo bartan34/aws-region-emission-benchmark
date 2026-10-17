@@ -1,0 +1,10 @@
+{
+  "region": "us-west-2", "az": "us-west-2b", "instance_id": "i-0289fc492343a3760", "instance_type": "m5.large",
+  "ami": "ami-03d70b8354a16a8bc", "kernel": "7.0.0-1014-aws", "os": "Ubuntu 24.04.5 LTS",
+  "sysbench": "sysbench 1.0.20",
+  "cpu_model": "Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz",
+  "vcpus": 2,
+  "runs": 5, "run_seconds": 600, "idle_seconds": 600,
+  "threads": 2, "cpu_max_prime": 20000,
+  "meta_written_utc": "2026-10-11T21:01:20Z"
+}

@@ -1,0 +1,6 @@
+region,country_iso3,aws_name,why_selected
+us-east-1,USA,US East (N. Virginia),"high-carbon US grid; Learner Lab region; largest AWS region"
+us-west-2,USA,US West (Oregon),"hydro-heavy grid; Learner Lab region; same PUE group as us-east-1 -> isolates grid effect"
+eu-west-1,IRL,Europe (Ireland),"local relevance (Dublin); wind-heavy but gas-backed grid"
+eu-north-1,SWE,Europe (Stockholm),"near-zero-carbon grid; embodied-dominant case"
+ap-south-1,IND,Asia Pacific (Mumbai),"coal-heavy grid; highest AWS regional PUE group (APAC)"

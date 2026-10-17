@@ -1,0 +1,9 @@
+instance_type,load_pct,watts,source,source_url,year,accessed,note
+m5.large,0,4.4,Teads EC2 dataset (Davy 2021),https://docs.google.com/spreadsheets/d/1DqYgQnEDLQVQm5acMAhLgHLD8xXCG9BIrk-_Nv6jF3k,2021,2026-10-10,"Instance @ Idle; incl. baseboard/RAM share"
+m5.large,10,7.0,Teads EC2 dataset (Davy 2021),https://docs.google.com/spreadsheets/d/1DqYgQnEDLQVQm5acMAhLgHLD8xXCG9BIrk-_Nv6jF3k,2021,2026-10-10,Instance @ 10%
+m5.large,50,14.1,Teads EC2 dataset (Davy 2021),https://docs.google.com/spreadsheets/d/1DqYgQnEDLQVQm5acMAhLgHLD8xXCG9BIrk-_Nv6jF3k,2021,2026-10-10,Instance @ 50%
+m5.large,100,20.0,Teads EC2 dataset (Davy 2021),https://docs.google.com/spreadsheets/d/1DqYgQnEDLQVQm5acMAhLgHLD8xXCG9BIrk-_Nv6jF3k,2021,2026-10-10,"Instance @ 100%; integer workload -> treat as upper bound"
+m5.large-ccf2026,0,1.4,CCF per-architecture coefficient (Cascade Lake 0.690 W/vCPU x 2),https://github.com/cloud-carbon-footprint/ccf-coefficients,2026,2026-10-10,"CPU package only; alt source for sensitivity"
+m5.large-ccf2026,100,8.1,CCF per-architecture coefficient (Cascade Lake 4.063 W/vCPU x 2),https://github.com/cloud-carbon-footprint/ccf-coefficients,2026,2026-10-10,"2.5x lower than Teads at 100%"
+m6i.large,0,4.6,Teads via Scott Logic (Wright 2024),https://blog.scottlogic.com/2024/05/08/measuring-energy-usage-in-the-cloud.html,2021,2026-10-03,reference row
+m6i.large,100,16.2,Teads via Scott Logic (Wright 2024),https://blog.scottlogic.com/2024/05/08/measuring-energy-usage-in-the-cloud.html,2021,2026-10-03,

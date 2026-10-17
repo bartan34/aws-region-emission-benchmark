@@ -1,0 +1,6 @@
+region,pue_group,pue,year,source,source_url,accessed,note
+us-east-1,AMER,1.14,2023,Amazon AWS sustainability page,https://sustainability.aboutamazon.com/products-services/aws-cloud,2026-10-03,global 2025 average = 1.14 (same page)
+us-west-2,AMER,1.14,2023,Amazon AWS sustainability page,https://sustainability.aboutamazon.com/products-services/aws-cloud,2026-10-03,global 2025 average = 1.14 (same page)
+eu-west-1,EMEA,1.12,2023,Amazon AWS sustainability page,https://sustainability.aboutamazon.com/products-services/aws-cloud,2026-10-03,global 2025 average = 1.14 (same page)
+eu-north-1,EMEA,1.12,2023,Amazon AWS sustainability page,https://sustainability.aboutamazon.com/products-services/aws-cloud,2026-10-03,global 2025 average = 1.14 (same page)
+ap-south-1,APAC,1.28,2023,Amazon AWS sustainability page,https://sustainability.aboutamazon.com/products-services/aws-cloud,2026-10-03,global 2025 average = 1.14 (same page)

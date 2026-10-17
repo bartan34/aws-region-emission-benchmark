@@ -1,0 +1,15 @@
+install_start_utc=2026-10-11T14:09:16Z
+install_end_utc=2026-10-11T14:09:41Z
+idle_start_utc=2026-10-11T14:09:41Z
+idle_end_utc=2026-10-11T14:19:41Z
+run1_start_utc=2026-10-11T14:19:42Z
+run1_end_utc=2026-10-11T14:29:42Z
+run2_start_utc=2026-10-11T14:30:42Z
+run2_end_utc=2026-10-11T14:40:42Z
+run3_start_utc=2026-10-11T14:41:42Z
+run3_end_utc=2026-10-11T14:51:42Z
+run4_start_utc=2026-10-11T14:52:42Z
+run4_end_utc=2026-10-11T15:02:42Z
+run5_start_utc=2026-10-11T15:03:42Z
+run5_end_utc=2026-10-11T15:13:42Z
+done_utc=2026-10-11T15:14:42Z

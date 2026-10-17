@@ -1,0 +1,10 @@
+{
+  "region": "ap-south-1", "az": "ap-south-1b", "instance_id": "i-0deb59a994eb5fd08", "instance_type": "m5.large",
+  "ami": "ami-065d2b03fb493085a", "kernel": "7.0.0-1014-aws", "os": "Ubuntu 24.04.5 LTS",
+  "sysbench": "sysbench 1.0.20",
+  "cpu_model": "Intel(R) Xeon(R) Platinum 8175M CPU @ 2.50GHz",
+  "vcpus": 2,
+  "runs": 5, "run_seconds": 600, "idle_seconds": 600,
+  "threads": 2, "cpu_max_prime": 20000,
+  "meta_written_utc": "2026-10-11T14:09:48Z"
+}
