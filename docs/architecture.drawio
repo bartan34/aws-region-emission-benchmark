@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="figure1" name="Figure 1">
+    <mxGraphModel dx="1150" dy="600" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1150" pageHeight="546" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="c0" value="AWS region (repeated in us-east-1, us-west-2, eu-west-1, eu-north-1, ap-south-1)" style="rounded=1;arcSize=3;html=1;dashed=1;dashPattern=8 6;strokeWidth=2;strokeColor=#036B8C;fillColor=none;verticalAlign=top;align=left;spacingLeft=24;spacingTop=8;fontSize=15;fontStyle=1;fontColor=#036B8C;whiteSpace=wrap;container=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="24" width="760" height="500" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_launch" value="&lt;b&gt;Launch (AWS CLI)&lt;/b&gt;&lt;br&gt;run-instances&lt;br&gt;Ubuntu 24.04 AMI via SSM&lt;br&gt;Parameter Store&lt;br&gt;detailed monitoring enabled&lt;br&gt;shutdown behaviour = terminate" style="rounded=1;arcSize=8;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#333333;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="100" width="235" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_ec2" value="&lt;b&gt;EC2 m5.large (2 vCPU)&lt;/b&gt;&lt;br&gt;cloud-init user-data script&lt;br&gt;sysbench 1.0.20 cpu, 2 threads&lt;br&gt;600 s idle + 5 × 600 s runs&lt;br&gt;lscpu, meta.json, timeline (UTC)" style="rounded=1;arcSize=8;html=1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#333333;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="400" y="100" width="280" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_cw" value="&lt;b&gt;Amazon CloudWatch&lt;/b&gt;&lt;br&gt;CPUUtilization, 1-minute&lt;br&gt;hypervisor-side measurement" style="rounded=1;arcSize=8;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#333333;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="390" width="250" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_s3" value="&lt;b&gt;Amazon S3 (same region)&lt;/b&gt;&lt;br&gt;sysbench output, lscpu, meta.json, timeline" style="rounded=1;arcSize=8;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#333333;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="400" y="392" width="280" height="98" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_local" value="&lt;b&gt;Local analysis&lt;/b&gt;&lt;br&gt;sci.py / spreadsheet&lt;br&gt;SCI = ((E × I) + M) / R&lt;br&gt;location-based annual &amp;amp; hourly, market-based&lt;br&gt;sensitivity analysis" style="rounded=1;arcSize=8;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#333333;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="840" y="100" width="280" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="b_ext" value="&lt;b&gt;External data sources&lt;/b&gt;&lt;br&gt;Teads power curve (Davy 2021)&lt;br&gt;AWS regional PUE (Amazon)&lt;br&gt;Grid intensity: Electricity Maps /&lt;br&gt;Google Cloud (annual + hourly)&lt;br&gt;Boavizta API (embodied)" style="rounded=1;arcSize=8;html=1;whiteSpace=wrap;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="840" y="380" width="280" height="124" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_launch" value="launch" style="edgeStyle=none;html=1;strokeColor=#333333;labelBackgroundColor=#ffffff;fontSize=12;" edge="1" parent="1" source="b_launch" target="b_ec2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_metrics" value="CPU % (1-min)" style="edgeStyle=none;html=1;dashed=1;strokeColor=#333333;labelBackgroundColor=#ffffff;fontSize=12;exitX=0;exitY=0.72;entryX=1;entryY=0.2;" edge="1" parent="1" source="b_ec2" target="b_cw">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_upload" value="upload" style="edgeStyle=none;html=1;strokeColor=#333333;labelBackgroundColor=#ffffff;fontSize=12;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="b_ec2" target="b_s3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_pull" value="" style="edgeStyle=none;html=1;strokeColor=#333333;exitX=1;exitY=0.12;entryX=0.1;entryY=1;" edge="1" parent="1" source="b_cw" target="b_local">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_raw" value="raw data" style="edgeStyle=none;html=1;strokeColor=#333333;labelBackgroundColor=#ffffff;fontSize=12;exitX=1;exitY=0.35;entryX=0.12;entryY=1;" edge="1" parent="1" source="b_s3" target="b_local">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_coeff" value="coefficients" style="edgeStyle=none;html=1;strokeColor=#333333;labelBackgroundColor=#ffffff;fontSize=12;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="b_ext" target="b_local">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

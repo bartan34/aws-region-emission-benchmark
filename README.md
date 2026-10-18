@@ -40,6 +40,16 @@ electricity is ~95% of the footprint. Full per-run values:
 `data/processed/sci-summary.csv`. Figures and tables:
 `docs/figures/sci-tables-figures.pdf`.
 
+## Architecture
+
+![Experiment architecture](docs/architecture.png)
+
+Each region runs the same sequence: launch via AWS CLI → EC2 m5.large runs
+sysbench and uploads outputs to a same-region S3 bucket while CloudWatch
+records 1-minute CPU utilisation → `analysis/sci.py` computes SCI from the
+raw data plus the external coefficients. The editable diagram source is
+`docs/architecture.drawio`.
+
 ## Quick start
 
 Prerequisites: AWS CLI v2 configured, `jq`, Python 3.10+, an IAM instance
@@ -81,7 +91,7 @@ data/coefficients/  every external number with source, year, access date
 data/raw/<region>/  per-instance outputs: sysbench, lscpu, meta.json, cloudwatch.csv
 data/processed/     sci-results.csv, sci-summary.csv
 analysis/sci.py     the SCI computation
-docs/               IAM policy, figures
+docs/               IAM policy, architecture diagram, figures
 ```
 
 ## Assumptions and limitations
